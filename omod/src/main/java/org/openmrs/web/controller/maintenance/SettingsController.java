@@ -19,7 +19,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import org.apache.commons.lang.StringUtils;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+//import org.apache.log4j.Logger;
 import org.openmrs.GlobalProperty;
 import org.openmrs.api.APIException;
 import org.openmrs.api.AdministrationService;
@@ -43,7 +45,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 public class SettingsController {
 
-	protected final Logger log = Logger.getLogger(getClass());
+//	protected final Logger log = Logger.getLogger(getClass());
+	protected final Logger log = LogManager.getLogger(getClass());
 
 	public static final String SETTINGS_PATH = "admin/maintenance/settings";
 	public static final String SETTINGS_VIEW_PATH = "/module/legacyui/admin/maintenance/settings";
